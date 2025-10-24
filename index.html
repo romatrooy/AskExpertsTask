@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>AskExperts</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./icons/logo.svg" alt="Логотип" class="logo-icon">
+                <span>AskExperts</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="active">
+                        <span class="marker"></span>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <span class="marker"></span>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <span class="marker"></span>
+                        <a href="#">Pages</a>
+                    </li>
+                    <li>
+                        <span class="marker"></span>
+                        <a href="#">Work</a>
+                    </li>
+                    <li>
+                        <span class="marker"></span>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <script>
+                const items = document.querySelectorAll('nav ul li');
+                items.forEach(item => {
+                  item.addEventListener('click', () => {
+                    items.forEach(i => i.classList.remove('active')); // снять активный со всех
+                    item.classList.add('active'); // добавить текущему
+                  });
+                });
+              </script>
+
+            <button id="contact" aria-label="Контактная информация" title="+ (888) 452 1505">
+                <img src="./icons/phone.svg" alt="phone" class="phone-icon">
+                <span>+ (888) 452 1505</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-background">
+                <img src="./icons/banner.svg" alt="Banner background" class="banner-bg-image">
+            </div>
+            <div class="banner-content">
+                <div class="banner-subtext">
+                    <span>HELLO' I AM</span>
+                </div>
+                <div class="banner-title">
+                    <h1>Adam Buschemia</h1>
+                    <h2>Business Consultant</h2>
+                </div>
+                <div class="banner-description">
+                    <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                </div>
+                <button id="book" aria-label="Book a meeting" title="Book a Meeting">
+                    <img src="./icons/book.svg" alt="book" class="book-icon">
+                    <span>Book a Meeting</span>
+                </button>
+            </div>
+        </section>
+        <section class="cards-wrapper">
+            <div class="cards">
+                <article class="card card-finance">
+                    <h3>Finance & Restructuring</h3>
+                    <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                    <button id="our-service" aria-label="Our Services" title="our-service">Our Services</button>
+                </article>
+                <article class="card card-approach">
+                    <h3>Our Approach</h3>
+                    <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                    <button id="our-approach" aria-label="Our Approach" title="our-approach">Our Approach</button>
+                </article>
+                <article class="card card-consultalk">
+                    <h3>Consultalk result</h3>
+                    <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                    <button id="our-consultalk" aria-label="Our Consultalk" title="our-consultalk">Consultalk result</button>
+                </article>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="about-subtext">
+                        <span>ABOUT ME</span>
+                    </div>
+                    <div class="about-title">
+                        <h1>About our Consuting Agency Team</h1>
+                    </div>
+                    <div class="about-description">
+                        <p>We create experiences and build products that make business grow</p>
+                        <span>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="./icons/line.svg" alt="line" class="line-icon">
+                        <button id="email" aria-label="Email" title="email">
+                            <img src="./icons/email.svg" alt="email" class="email-icon">
+                            <span>Buschemia@gmailcom</span>
+                        </button>
+                        <img src="./icons/line.svg" alt="line" class="line-icon">
+                        <button id="contact-us" aria-label="Contact Us" title="contact-us">
+                            <img src="./icons/contact-us.svg" alt="contact-us" class="contact-us-icon">
+                            <span>(001) 5648 6584</span>
+                        </button>
+                        <button id="appointment" aria-label="Appointment" title="appointment">
+                            <span>Make An Appointment</span>
+                        </button>
+                    </div>
+                </div>
+                <img src="./icons/about.svg" alt="about-image" class="about-image">
+            </div>
+        </section>
+        <section class="services">
+            <div class="services-content">
+                <div class="services-subtext">
+                    <span>SERVICES</span>
+                </div>
+                <div class="services-title">
+                    <h1>Get Control Over Your Business I take <br>your finance to next level</h1>
+                </div>
+            </div>
+            <div class="services-cards-wrapper">
+                <button class="services-navigation prev" aria-label="Previous" onclick="prevSlide()">
+                    <img src="./icons/arrow-left.svg" alt="Previous">
+                </button>
+                <div class="services-cards">
+                    <article class="services-card card-1">
+                        <img src="./icons/service-card-1.svg" alt="service-1" class="service-1-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-1" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-2">
+                        <img src="./icons/service-card-2.svg" alt="service-2" class="service-2-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-2" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-3">
+                        <img src="./icons/service-card-3.svg" alt="service-3" class="service-3-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-3" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-4">
+                        <img src="./icons/service-card-4.svg" alt="service-4" class="service-4-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-4" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-5">
+                        <img src="./icons/service-card-1.svg" alt="service-5" class="service-1-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-5" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-6">
+                        <img src="./icons/service-card-2.svg" alt="service-6" class="service-2-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-6" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-7">
+                        <img src="./icons/service-card-3.svg" alt="service-7" class="service-3-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-7" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                    <article class="services-card card-8">
+                        <img src="./icons/service-card-4.svg" alt="service-8" class="service-4-icon">
+                        <div class="services-card-content">
+                            <h3>Audit & Evaluation</h3>
+                            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+                            <button id="learn-more-8" aria-label="Learn More" title="learn-more">Learn More</button>
+                        </div>
+                    </article>
+                </div>
+                <button class="services-navigation next" aria-label="Next" onclick="nextSlide()">
+                    <img src="./icons/arrow-right.svg" alt="Next">
+                </button>
+            </div>
+        </section>
+        <section class="counter">   
+            <div class="counter-container">
+                <div class="counter-left">
+                    <div class="counter-subtext">
+                        <span>EXPERIENCE</span>
+                    </div>
+                    <div class="counter-title">
+                        <h1>More than 25 years of experience</h1>
+                    </div>
+                    <div class="counter-description">
+                        <p>3000+ our clients are insured around the World</p>
+                    </div>
+                </div>
+                <div class="counter-right">
+                    <div class="counter-stats">
+                        <div class="stat-item consistency">  
+                            <img src="./icons/consistency.svg" alt="Consistency" class="progress-icon">
+                            <span class="stat-label">Consistency</span>
+                        </div>
+                        <div class="stat-item improvement">  
+                            <img src="./icons/improvement.svg" alt="Improvement" class="progress-icon">
+                            <span class="stat-label">Improvement</span>
+                        </div>
+                        <div class="stat-item branching">  
+                            <img src="./icons/branching.svg" alt="Branching" class="progress-icon">
+                            <span class="stat-label">Branching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Глобальные переменные для слайдера
+        let currentIndex = 0;
+        let servicesCards = null;
+        let cards = null;
+        let totalCards = 0;
+        
+        // Функция для определения количества карточек на экран
+        function getCardsPerView() {
+            const width = window.innerWidth;
+            if (width <= 768) return 1; // мобильный
+            if (width <= 1024) return 2; // планшет
+            return 4; // десктоп
+        }
+        
+        // Функция для обновления позиции слайдера
+        function updateSlider() {
+            const cardsPerView = getCardsPerView();
+            // Более точный расчет ширины карточки с учетом gap
+            const containerWidth = servicesCards.offsetWidth;
+            const gap = 20; // gap между карточками
+            const cardWidth = (containerWidth / cardsPerView) + (gap / cardsPerView);
+            const translateX = -currentIndex * cardWidth;
+            servicesCards.style.transform = `translateX(${translateX}px)`;
+            
+            console.log(`Slider: currentIndex=${currentIndex}, cardsPerView=${cardsPerView}, containerWidth=${containerWidth}, cardWidth=${cardWidth}, translateX=${translateX}`);
+        }
+        
+        // Глобальные функции для слайдера
+        function nextSlide() {
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            
+            console.log(`Next: currentIndex=${currentIndex}, maxIndex=${maxIndex}, totalCards=${totalCards}, cardsPerView=${cardsPerView}`);
+            
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Возврат к началу
+            }
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            const cardsPerView = getCardsPerView();
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            
+            console.log(`Prev: currentIndex=${currentIndex}, maxIndex=${maxIndex}, totalCards=${totalCards}, cardsPerView=${cardsPerView}`);
+            
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = maxIndex; // Переход к концу
+            }
+            updateSlider();
+        }
+        
+        // Инициализация слайдера
+        document.addEventListener('DOMContentLoaded', function() {
+            servicesCards = document.querySelector('.services-cards');
+            
+            if (servicesCards) {
+                cards = servicesCards.querySelectorAll('.services-card');
+                totalCards = cards.length;
+                
+                // Автоматическое обновление при изменении размера окна
+                window.addEventListener('resize', function() {
+                    const cardsPerView = getCardsPerView();
+                    // Сброс индекса если он выходит за границы
+                    if (currentIndex > totalCards - cardsPerView) {
+                        currentIndex = Math.max(0, totalCards - cardsPerView);
+                    }
+                    updateSlider();
+                });
+                
+                // Инициализация слайдера
+                updateSlider();
+            }
+        });
+
+        // Простая анимация появления иконок при скролле
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressIcons = entry.target.querySelectorAll('.progress-icon');
+                    progressIcons.forEach((icon, index) => {
+                        setTimeout(() => {
+                            icon.style.opacity = '0';
+                            icon.style.transform = 'scale(0.8)';
+                            icon.style.transition = 'all 0.6s ease';
+                            
+                            setTimeout(() => {
+                                icon.style.opacity = '1';
+                                icon.style.transform = 'scale(1)';
+                            }, 100);
+                        }, index * 200);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Наблюдение за блоком counter
+        const counterSection = document.querySelector('.counter');
+        if (counterSection) {
+            counterObserver.observe(counterSection);
+        }
+    </script>
+</body>
+</html>
